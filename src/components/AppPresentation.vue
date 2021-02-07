@@ -11,12 +11,12 @@
     </div>
     <img
       class="hidden md:block self-end"
-      src="@/assets/man-talking.png"
+      src="@/assets/images/man-talking.png"
       alt="Man talking with notebook"
     />
     <img
       class="w-5/6 md:hidden"
-      src="@/assets/women-talking.png"
+      src="@/assets/images/women-talking.png"
       alt="Women talking with notebook"
     />
   </section>

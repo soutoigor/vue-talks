@@ -9,12 +9,12 @@ import {
 } from 'vue'
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyBnvR-kx_oVMn6Sz2kNGjeQnYW4cErrbZY',
-  authDomain: 'vue-talks-default.firebaseapp.com',
-  projectId: 'vue-talks-default',
-  storageBucket: 'vue-talks-default.appspot.com',
-  messagingSenderId: '432802803947',
-  appId: '1:432802803947:web:c6fd963ba043f1d90d4eae',
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_MESSAGING_ID,
+  appId: process.env.VUE_APP_APP_ID,
 })
 
 const auth = firebase.auth()
