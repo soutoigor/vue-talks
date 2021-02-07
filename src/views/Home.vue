@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <app-header />
+  <main class="flex flex-col justify-center items-center h-screen">
+    <chat-container v-if="isAuthenticated" />
+    <app-presentation v-else />
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import AppHeader from '@/components/AppHeader'
+import AppPresentation from '@/components/AppPresentation'
+import ChatContainer from '@/components/ChatContainer'
+import { useAuth } from '@/lib/firebase'
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld,
+    AppHeader,
+    AppPresentation,
+    ChatContainer,
   },
-};
+  setup() {
+    const { isAuthenticated } = useAuth()
+
+    return { isAuthenticated }
+  },
+}
 </script>
