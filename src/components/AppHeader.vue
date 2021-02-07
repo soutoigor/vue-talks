@@ -4,7 +4,7 @@
   >
     <img
       class="h-16 sm:h-28"
-      src="@/assets/logo.png"
+      src="@/assets/images/logo.png"
       alt="Vue Talks"
     />
     <ul class="hidden lg:flex justify-evenly items-center w-2/3">
