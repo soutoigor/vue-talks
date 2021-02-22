@@ -1,9 +1,10 @@
 <template>
   <header
-    class="flex justify-between items-center py-3 px-2 sm:px-12 md:px-24 bg-gray-700 shadow-sm"
+    class="flex fixed justify-between w-full
+    h-20 items-center px-2 sm:px-12 md:px-24 bg-opacity-70 bg-gray-900 shadow-md"
   >
     <img
-      class="h-16 sm:h-28"
+      class="h-16 sm:h-16"
       src="@/assets/images/logo.png"
       alt="Vue Talks"
     />
