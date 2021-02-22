@@ -1,8 +1,9 @@
 <template>
   <button
     class="bg-mediumPurple text-white font-bold py-2 px-4 rounded"
-    :class="$props.disabled && ['opacity-50', 'cursor-not-allowed']"
-    :disabled="$props.disabled"
+    :class="disabled && ['opacity-50', 'cursor-not-allowed']"
+    :disabled="disabled"
+    :type="type"
   >
     <slot />
   </button>
@@ -11,6 +12,11 @@
 <script>
 export default {
   props: {
+    type: {
+      type: String,
+      required: false,
+      default: 'button',
+    },
     disabled: {
       type: Boolean,
       default: false,
