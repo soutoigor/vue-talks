@@ -47,11 +47,26 @@
         v-for="room of filteredRooms"
         :key="room.id"
         class="cursor-pointer bg-gray-900 rounded-md my-2 h-16 shadow-sm opacity-40
-        hover:opacity-70 transition-all flex items-center px-6 py-4 slide-item"
+        hover:opacity-70 transition-all flex justify-between items-center px-6 py-4 slide-item"
         :class="isActiveRoom(room.id) && ['opacity-100', 'transition-opacity']"
         @click="setRoom(room.id)"
       >
-        {{ room.name }}
+        <span>{{ room.name }}</span>
+        <span class="w-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+        </span>
       </li>
     </transition-group>
   </main>

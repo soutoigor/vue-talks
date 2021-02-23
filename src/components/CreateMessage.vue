@@ -1,6 +1,6 @@
 <template>
   <form
-    class="flex gap-4"
+    class="flex gap-2 md:gap-4"
     @submit.prevent="createMessage"
   >
     <text-field
