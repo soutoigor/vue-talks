@@ -3,13 +3,31 @@
     class="flex flex-col justify-between h-full w-full"
   >
     <header
-      class="flex items-center justify-between
+      class="flex items-center gap-8 md:gap-0 md:justify-between
        bg-mediumPurple bg-opacity-10 px-5 py-3 z-10 shadow-md"
     >
+      <button
+        class="block md:hidden text-white w-6"
+        @click="$router.back"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24" stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2" d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
       <h1 class="text-lg font-semibold">
         {{ room.name }}
       </h1>
-      <small class="text-gray-500">Mensagens: {{ messages.length }}</small>
+      <small class="hidden md:block text-gray-500">
+        Mensagens: {{ messages.length }}
+      </small>
     </header>
     <main
       class="flex flex-col justify-end flex-1 gap-6 h-3/4 mb-6"
@@ -20,7 +38,7 @@
       >
         Não há mensagens nesta conversa ainda 😶
       </h3>
-      <ul class="max-h-full overflow-y-auto">
+      <ul class="max-h-full max-w-full overflow-x-hidden overflow-y-auto">
         <chat-message
           v-for="message of messages"
           :key="message.id"

@@ -7,7 +7,7 @@
       class="flex gap-3"
       :class="isUser && 'flex-row-reverse'"
     >
-      <img class="rounded-full h-14" :src="message.userPhotoUrl" />
+      <img class="rounded-full h-10 md:h-14" :src="message.userPhotoUrl" />
       <div
         class="flex flex-col"
         :class="isUser && 'items-end'"
@@ -23,7 +23,7 @@
             {{ message.userName }}
           </span>
           -
-          <span class="text-gray-500 text-sm">
+          <span class="text-gray-500 text-xs md:text-sm">
             {{ formatMessageTime(message.createdAt) }}
           </span>
         </div>
@@ -34,7 +34,7 @@
           <img
             v-if="message.attachmentUrl"
             :src="message.attachmentUrl"
-            class="max-w-5xl my-1"
+            class="max-w-full md:max-w-5xl my-1"
           />
           {{ message.text }}
         </div>
