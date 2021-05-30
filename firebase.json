@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "vue-talks-default",
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
