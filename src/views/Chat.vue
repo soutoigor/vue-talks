@@ -45,7 +45,10 @@ export default {
       windowSize.value = window.innerWidth
     }
 
-    onMounted(() => window.addEventListener('resize', setWindowSize))
+    onMounted(() => {
+      setWindowSize()
+      window.addEventListener('resize', setWindowSize)
+    })
     onUnmounted(() => window.removeEventListener('resize', setWindowSize))
 
     const shouldShowChat = computed(() => !!route.params.id)
